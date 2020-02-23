@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "Pe-icon-7-stroke";
+    src: url("fonts/Pe-icon-7-strokebb1d.eot");
+    src: url("fonts/Pe-icon-7-strokebb1d.eot?#iefix") format("embedded-opentype"), url("fonts/Pe-icon-7-strokebb1d.woff") format("woff"), url("fonts/Pe-icon-7-strokebb1d.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "FontAwesome";
+    src: url("fonts/fontawesome-webfontd41d.eot");
+    src: url("fonts/fontawesome-webfontd41d.eot?#iefix") format("embedded-opentype"), url("fonts/fontawesome-webfont3e6e.woff") format("woff"), url("fonts/fontawesome-webfont3e6e.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    font-family: Work Sans, sans-serif;
+    line-height: 1.65;
+    letter-spacing: .004em;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #373a3c;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link:hover,
+.link:focus {
+    filter: brightness(1.5);
+    outline: none;
+}

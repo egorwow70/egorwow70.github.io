@@ -1,0 +1,85 @@
+.mainContainerD {
+    background: white center;
+    background-size: cover;
+    min-height: 1441.33px;
+    text-align: center;
+}
+
+.container5 h2 {
+    padding-top: 65px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 39px;
+    font-family: Playfair Display, serif;
+    color: #171717;
+    font-weight: 700;
+}
+
+.container6 {
+    margin-bottom: 52px;
+    color: rgb(95, 95, 95);
+    font-size: 15px;
+}
+
+.container7 {
+    height: 1109.93px;
+    padding-bottom: 95px;
+}
+
+.container7 div {
+    display: flex;
+    justify-content: center;
+}
+
+.box2 {
+    position: relative;
+    height: 369px;
+    width: 369px;
+    background-position: center;
+    background-size: cover;
+}
+
+.darkback1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+    color: white;
+    opacity: 0;
+    transition: opacity .5s, background-color .5s;
+    font-family: Playfair Display, serif;
+    font-weight: 700;
+}
+
+.darkback1 div {
+    font-family: Work Sans, sans-serif;
+    font-size: 14.25px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.darkback1 h2 {
+    margin-bottom: 5px;
+}
+
+.darkback1 h2,
+.darkback1 div {
+    position: relative;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: transform .4s .2s, opacity .4s .2s;
+}
+
+.box2:hover .darkback1 {
+    opacity: 1;
+}
+
+.darkback1:hover h2,
+.darkback1:hover div {
+    transform: translateY(0px);
+    opacity: 1;
+}

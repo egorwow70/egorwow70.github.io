@@ -1,0 +1,35 @@
+.container1 {
+    height: 50px;
+    padding: 30px 200px;
+    padding-bottom: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    position: fixed;
+}
+
+.container1 img {
+    padding-left: 5px;
+}
+
+.container1 ul li {
+    float: left;
+    list-style-type: none;
+    padding: 0 15px;
+    color: #bfbfbf;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14.4px;
+}
+
+.container1.scrolled {
+    background-color: #fff;
+}
+
+.container1.scrolled ul li {
+    color: #000;
+}

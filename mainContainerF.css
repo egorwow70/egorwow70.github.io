@@ -1,0 +1,72 @@
+.mainContainerF {
+    background-color: #ebebeb;
+    background-size: cover;
+    min-height: 161.4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container12 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.container12 ul li {
+    float: left;
+    list-style-type: none;
+    color: #171717;
+}
+
+.container12 ul {
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+.container12 p {
+    color: rgb(95, 95, 95);
+    font-size: 14.25px;
+}
+
+.container12 ul li a {
+    display: block;
+    font-size: 1.13rem;
+    color: inherit;
+    padding: 3px 8px;
+    opacity: .4;
+    transition: opacity .5s;
+}
+
+.container12 ul li a i {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+.twitter::before {
+    content: "\f099";
+}
+
+.facebook::before {
+    content: "\f09a";
+}
+
+.dribbble::before {
+    content: "\f17d";
+}
+
+.instagram::before {
+    content: "\f16d";
+}
+
+.container12 div {
+    display: flex;
+    justify-content: center;
+}
+
+.darkback2:hover {
+    opacity: 1;
+    color: rgba(12, 12, 12, 0.9);
+    cursor: pointer;
+}

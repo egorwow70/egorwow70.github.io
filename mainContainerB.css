@@ -1,0 +1,33 @@
+.mainContainerB {
+    background-image: white center;
+    background-size: cover;
+    min-height: 419px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container4 {
+    height: 259px;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.container4 h2 {
+    font-size: 39px;
+    font-family: Playfair Display, serif;
+    color: #171717;
+    font-weight: 700;
+    margin: 0;
+}
+
+.container4 p {
+    font-family: Work Sans, sans-serif;
+    color: rgb(95, 95, 95);
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 23px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    line-height: 24.75px;
+}

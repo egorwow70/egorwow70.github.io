@@ -1,0 +1,60 @@
+.mainContainerC {
+    background: url(img/bg-pattern.jpg) center;
+    background-size: cover;
+    min-height: 241px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+}
+
+.mainContainerC span {
+    font-family: Pe-icon-7-stroke;
+    font-size: 3.3rem;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-align: center;
+}
+
+.box1 {
+    text-transform: uppercase;
+    display: flex;
+    letter-spacing: .004em;
+    font-weight: 500;
+    font-size: .97rem;
+    margin-top: -1px;
+    color: #fff;
+    padding: 0 15px;
+    margin: 0 15px;
+}
+
+.box1 span {
+    margin: 0 15px;
+}
+
+.text_numb {
+    font-size: 18.75px;
+}
+
+.text_headers {
+    font-size: 14.55px;
+}
+
+.suitcase::before {
+    content: "\e622";
+}
+
+.star::before {
+    content: "\e611";
+}
+
+.clock::before {
+    content: "\e66b";
+}
+
+.heart::before {
+    content: "\e642";
+}
