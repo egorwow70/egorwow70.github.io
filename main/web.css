@@ -81,7 +81,6 @@ body {
     list-style-type: none;
     margin: 0px;
     padding: 50px 95px;
-    padding-right: 260px;
 }
 
 .hello-menu__item-list:hover {
@@ -307,6 +306,7 @@ body {
 
 .auctor-man_bg-image {
     background-image: url(images/about-img.jpg);
+    background-size: cover;
     background-position: 50% 0%;
 }
 
@@ -345,6 +345,10 @@ body {
     height: 220px;
 }
 
+.skills-bar__item {
+    margin-bottom: 20px;
+}
+
 .skills-bar__item-list {
     list-style-type: none;
     padding: 0px;
@@ -371,7 +375,6 @@ body {
 .bar {
     position: relative;
     display: block;
-    margin-bottom: 20px;
     height: 3px;
     background-color: white;
 }
@@ -479,8 +482,8 @@ body {
 }
 
 .direction-list__icon_telegram::before {
-    content: '\f3fe';
     font-family: 'Font Awesome 5 free', 'Font Awesome 5 brands';
+    content: '\f3fe';
 }
 
 .direction-list__icon_cells::before {
@@ -525,16 +528,16 @@ body {
 
 .experience__man_bg-image {
     background-image: url(images/experience-img.jpg);
-    background-position: 70% 18%;
+    background-size: cover;
 }
 
-.my {
+.my-content {
     width: 50%;
     display: flex;
     align-items: center;
 }
 
-.my_bg-red {
+.my-content_bg-red {
     background-color: #e9714c;
 }
 
@@ -562,6 +565,8 @@ body {
 }
 
 .designer-info {
+    min-width: 0;
+    flex: 1;
     padding-top: 8px;
 }
 
@@ -572,7 +577,7 @@ body {
 
 .designer-info__subtitle {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     padding-right: 50px;
     line-height: 40px;
     font-size: 21px;
@@ -583,7 +588,7 @@ body {
 .my-content__designer {
     display: flex;
     align-items: flex-start;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 
 .my-content__icon {
@@ -596,6 +601,7 @@ body {
 }
 
 .my-content__icon_tv::before {
+    font-family: "FontAwesome";
     content: '\f109';
 }
 
@@ -605,7 +611,7 @@ body {
 
 .designer-info__date {
     font-family: "SourceSansProBold";
-    font-size: 22px;
+    font-size: 21px;
     font-weight: bold;
 }
 
@@ -631,14 +637,14 @@ body {
 
 .education__work_bg-image {
     background-image: url(images/education-img.jpg);
-    background-position: 35% 4%;
+    background-size: cover;
 }
 
-.my {
+.my-content {
     padding-top: 10px;
 }
 
-.my_bg-gold {
+.my-content_bg-gold {
     background-color: #e4ae58;
 }
 
@@ -667,11 +673,21 @@ body {
 }
 
 .proin-lobortis_bg-image {
+    position: relative;
+    background-color: rgba(12, 12, 12, 0.7);
+}
+
+.proin-lobortis_bg-image:after {
     background-image: url(images/quotes-bg.jpg);
     background-size: cover;
     background-position: 0% 19%;
-    background-color: rgba(12, 12, 12, 0.6);
-    background-blend-mode: darken;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .proin-lobortis__content {
@@ -694,16 +710,6 @@ body {
 
 .proin-lobortis__icon_star::before {
     content: '\f005';
-}
-
-.proin-lobortis__icon_star::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #edc667;
-    width: 20px;
-    height: 20px;
 }
 
 .proin-lobortis__title {
@@ -795,6 +801,18 @@ body {
     color: white;
 }
 
+@-webkit-keyframes autofill {
+    to {
+        color: inherit;
+        background: transparent;
+    }
+}
+
+.say-hello__input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
 .say-hello__input::placeholder {
     color: white;
 }
@@ -806,7 +824,7 @@ body {
 
 .say-hello__textarea {
     font-family: 'SourceSansPro', sans-serif;
-    height: 160px;
+    min-height: 160px;
     max-height: 400px;
     font-size: 22px;
     font-weight: 100;
@@ -830,11 +848,13 @@ body {
 
 .say-hello__button {
     margin-top: 50px;
+    cursor: pointer;
     border: none;
     border-radius: 40px;
     width: 380px;
-    background-color: white;
+    border: 3px solid white;
     color: black;
+    background-color: white;
     font-size: 22px;
     font-weight: 100;
     padding: 16px 0px;
@@ -1013,8 +1033,8 @@ body {
 
 .copyright__item-link:hover {
     cursor: pointer;
-    opacity: 0.6;
-    filter: brightness(1.3);
+    color: #efd28c;
+    filter: brightness(0.9);
 }
 
 .copyright__item-link:active {
