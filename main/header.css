@@ -183,8 +183,8 @@
 
 @media screen and (max-width: 1650px) {
     .hello-menu__item-list {
-        padding-right: 80px;
-        padding-left: 80px;
+        padding-right: 70px;
+        padding-left: 70px;
     }
 }
 
@@ -209,4 +209,132 @@
     }
 }
 
-@media screen and (max-width: 1000px) {}
+
+/*
+
+
+*/
+
+.hello-menu {
+    position: relative;
+}
+
+.hello-menu__burger {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.burger__line {
+    position: relative;
+    width: 15px;
+    height: 2px;
+    background-color: black;
+}
+
+.burger__line:before {
+    position: absolute;
+    top: -4px;
+    left: 0px;
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: black;
+}
+
+.burger__line:after {
+    position: absolute;
+    top: 4px;
+    left: 0px;
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: black;
+}
+
+@media screen and (max-width: 1000px) {
+    .hello-menu {
+        height: 15%;
+    }
+    .hello-menu__burger {
+        display: flex;
+        transition: .4s;
+    }
+    .hello-menu__item-list {
+        display: none;
+        position: absolute;
+        padding: 0px;
+        top: 100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .hello-menu__item {
+        padding: 0px 10px;
+    }
+    .hello-menu__burger:hover,
+    .hello-menu__burger:focus {
+        background-color: #dfac59;
+        cursor: pointer;
+    }
+    .hello-menu__burger:hover+.hello-menu__item-list,
+    .hello-menu__burger:focus+.hello-menu__item-list,
+    .hello-menu__burger:active+.hello-menu__item-list {
+        display: flex;
+    }
+    .hello-wrapper {
+        padding: 0px 40px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .header {
+        height: 1700px;
+    }
+    .hello {
+        height: 900px;
+    }
+    .hello-wrapper {
+        padding: 0px 30px;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .header {
+        height: 1800px;
+    }
+    .hello {
+        height: 1000px;
+    }
+    .hello-wrapper {
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header {
+        height: 1900px;
+    }
+    .hello {
+        height: 1200px;
+    }
+}
+
+
+/*.header {
+    height: 2000px;
+}
+
+.hello {
+    height: 1200px;
+}
+
+*/
