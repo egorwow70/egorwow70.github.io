@@ -1,0 +1,151 @@
+/* block-proin */
+
+.proin {
+    height: 650px;
+}
+
+.proin-lobortis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.proin-lobortis.proin-lobortis_bg-image {
+    position: relative;
+    background-color: rgba(12, 12, 12, 0.7);
+}
+
+.proin-lobortis.proin-lobortis_bg-image:after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url(images/quotes-bg.jpg);
+    background-size: cover;
+    background-position: 0% 19%;
+}
+
+.proin-lobortis__content {
+    padding: 0px 400px;
+}
+
+.proin-lobortis__icon {
+    position: relative;
+    display: inline-block;
+    margin-top: 55px;
+    transition: .5s;
+    cursor: pointer;
+    color: white;
+    font: 50px "FontAwesome";
+    font-weight: 900;
+}
+
+.proin-lobortis__icon:hover,
+.proin-lobortis__icon:focus {
+    color: #edc667;
+}
+
+.proin-lobortis__icon.proin-lobortis__icon_star::before {
+    content: '\f005';
+}
+
+.proin-lobortis__title {
+    margin-top: 25px;
+    margin-bottom: 60px;
+    letter-spacing: 0.7px;
+    font-size: 54px;
+    font-weight: 100;
+    line-height: 65px;
+}
+
+.proin-lobortis__subtitle {
+    color: #817d77;
+    letter-spacing: 0.2px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1750px) {
+    .proin-lobortis__content {
+        padding: 0px 200px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .proin-lobortis__content {
+        padding: 0px 180px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .proin-lobortis__content {
+        padding: 0px 150px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .proin-lobortis__content {
+        padding: 0px 120px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .proin-lobortis__content {
+        padding: 0px 100px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .proin {
+        height: 750px;
+    }
+    .proin-lobortis__content {
+        padding: 0px 70px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .proin {
+        height: 750px;
+    }
+    .proin-lobortis__title {
+        font-size: 50px;
+    }
+    .proin-lobortis__content {
+        padding: 0px 60px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .proin-lobortis__content {
+        padding: 0px 50px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .proin {
+        height: 850px;
+    }
+    .proin-lobortis__title {
+        font-size: 46px;
+    }
+    .proin-lobortis__content {
+        padding: 0px 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .proin {
+        height: 950px;
+    }
+    .proin-lobortis__content {
+        padding: 0px 20px;
+    }
+}

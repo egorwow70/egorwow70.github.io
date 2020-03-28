@@ -1,0 +1,212 @@
+/*block-header*/
+
+.hello-wrapper {
+    box-sizing: border-box;
+}
+
+.hello-wrapper_0x60 {
+    padding: 0px 60px;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.logo {
+    width: 50%;
+}
+
+.logo.logo_bg-image {
+    background-image: url(images/home-img.jpg);
+    background-position: 47% 50%;
+    background-size: cover;
+}
+
+.logo__title {
+    margin: 0px;
+    padding-top: 50px;
+    padding-left: 290px;
+    text-shadow: 1px 2px 1px rgba(255, 255, 255, 1);
+    font: bold 30px "SourceSansProBold";
+}
+
+.hello {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+}
+
+.hello.hello_bg-grey {
+    background-color: #f0e2d7;
+}
+
+.hello-menu__item-list {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 50px 95px;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.hello-menu__item {
+    padding: 0px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.hello-menu__item-link.hello-menu__item-link_gold {
+    color: #dfac59;
+    text-decoration: none;
+}
+
+.hello-menu__item-link {
+    position: relative;
+    transition: .4s;
+    outline: none;
+    cursor: pointer;
+    color: #504e58;
+    text-decoration: none;
+}
+
+.hello-menu__item-link:hover,
+.hello-menu__item-link:focus {
+    filter: brightness(1.2);
+    text-shadow: 1.2px 1.2px 0.3px rgba(12, 12, 12, 0.2);
+}
+
+.hello-menu__item-link:active {
+    filter: brightness(1.2);
+    text-shadow: none;
+}
+
+.hello-menu__item-link:after {
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    height: 2px;
+    width: 130%;
+    content: '';
+    transition: .4s;
+    -webkit-transform: translate(-50%, 0%) scaleX(0);
+    -ms-transform: translate(-50%, 0%) scaleX(0);
+    transform: translate(-50%, 0%) scaleX(0);
+    border-bottom: 2px solid #dfac59;
+}
+
+.hello-menu__item-link:hover:after,
+.hello-menu__item-link:focus:after {
+    -webkit-transform: translate(-50%, 0%) scaleX(1);
+    -ms-transform: translate(-50%, 0%) scaleX(1);
+    transform: translate(-50%, 0%) scaleX(1);
+}
+
+.hello-menu__item-link:active:after {
+    -webkit-transform: translate(-50%, 0%) scaleX(0);
+    -ms-transform: translate(-50%, 0%) scaleX(0);
+    transform: translate(-50%, 0%) scaleX(0);
+}
+
+.hello-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-family: "SourceSansProBold";
+}
+
+.hello-content__subtitle {
+    margin: 0px;
+    text-transform: uppercase;
+    color: #a29696;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.hello-content__title {
+    margin: 23px 0px;
+    color: #313534;
+    letter-spacing: 1px;
+    font-size: 51px;
+    font-weight: 100;
+}
+
+.hello-content__title .hello-content__title_bold {
+    font-weight: bold;
+}
+
+.hello-content__pharagraph {
+    margin: 0px;
+    margin-bottom: 65px;
+    color: #a29696;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+.hello-content__button {
+    width: 215px;
+    padding: 17px 10px;
+    transition: .4s;
+    outline: none;
+    text-transform: uppercase;
+    border: 4px solid black;
+    border-radius: 40px;
+    background-color: #f0e2d7;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+}
+
+.hello-content__button:hover,
+.hello-content__button:focus {
+    -webkit-transform: translateX(-7px);
+    -ms-transform: translateX(-7px);
+    transform: translateX(-7px);
+    cursor: pointer;
+    box-shadow: 3px 3px 2px #a29696;
+    background-color: #dfac59;
+}
+
+.hello-content__button:active {
+    -webkit-transform: translateX(4px);
+    -ms-transform: translateX(4px);
+    transform: translateX(4px);
+    box-shadow: 1px 1px 2px #a29696;
+}
+
+@media screen and (max-width: 1650px) {
+    .hello-menu__item-list {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .header {
+        height: 1600px;
+    }
+    .hello,
+    .logo {
+        width: 100%;
+        height: 800px;
+    }
+    .hello-menu,
+    .hello-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hello-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1000px) {}
