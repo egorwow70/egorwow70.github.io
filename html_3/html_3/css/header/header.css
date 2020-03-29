@@ -19,7 +19,7 @@
 }
 
 .logo.logo_bg-image {
-    background-image: url(images/home-img.jpg);
+    background-image: url(../../images/home-img.jpg);
     background-position: 47% 50%;
     background-size: cover;
 }

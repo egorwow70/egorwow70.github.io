@@ -27,7 +27,7 @@
     width: 100%;
     height: 100%;
     content: '';
-    background-image: url(images/quotes-bg.jpg);
+    background-image: url(../../images/quotes-bg.jpg);
     background-size: cover;
     background-position: 0% 19%;
 }

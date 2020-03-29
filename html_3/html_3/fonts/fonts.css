@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "FontAwesome";
+    src: url("fontawesome-webfont.eot");
+    src: url("FontAwesome.otf") format("OpenType"), url("fontawesome-webfont.woff") format("woff"), url("fontawesome-webfont.woff2") format("woff2"), url("fontawesome-webfont.svg") format("svg"), url("fontawesome-webfont3e6e.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SourceSansPro";
+    src: url("SourceSansPro/SourceSansPro-Light.ttf");
+    src: url("SourceSansPro/SourceSansPro-Regular.ttf") format(TrueType), url("SourceSansPro/SourceSansPro-Black.ttf") format(TrueType), url("SourceSansPro/SourceSansPro-Bold.ttf") format(TrueType), url("SourceSansPro/SourceSansPro-Italic.ttf") format(TrueType), url("SourceSansPro/SourceSansPro-Light.ttf") format(TrueType), url("SourceSansPro/SourceSansPro-SemiBold.ttf") format(TrueType);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SourceSansProBold";
+    src: url("SourceSansPro/SourceSansPro-Regular.ttf");
+}
