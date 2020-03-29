@@ -257,7 +257,10 @@
 
 @media screen and (max-width: 1000px) {
     .hello-menu {
+        width: 60%;
         height: 15%;
+        margin: 0 auto;
+        cursor: pointer;
     }
     .hello-menu__burger {
         display: flex;
@@ -273,16 +276,13 @@
     }
     .hello-menu__item {
         white-space: nowrap;
-        padding: 0px 10px;
+        padding: 2px 10px;
     }
-    .hello-menu__burger:hover,
-    .hello-menu__burger:focus {
+    .hello-menu:hover .hello-menu__burger {
         background-color: #dfac59;
-        cursor: pointer;
     }
-    .hello-menu__burger:hover+.hello-menu__item-list,
-    .hello-menu__burger:focus+.hello-menu__item-list,
-    .hello-menu__burger:active+.hello-menu__item-list {
+    .hello-menu:hover .hello-menu__item-list,
+    .hello-menu:focus .hello-menu__item-list {
         display: flex;
     }
     .hello-wrapper {
