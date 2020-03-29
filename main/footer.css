@@ -121,3 +121,30 @@
         padding: 0 10px;
     }
 }
+
+@media screen and (min-width: 2700px) {
+    .footer {
+        height: 600px;
+    }
+    .copyright__title,
+    .copyright__item-icon {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 3200px) {
+    .footer {
+        height: 700px;
+    }
+    .copyright__title,
+    .copyright__item-icon {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 3600px) {
+    .copyright__title,
+    .copyright__item-icon {
+        font-size: 35px;
+    }
+}

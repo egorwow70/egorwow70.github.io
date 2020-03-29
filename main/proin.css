@@ -149,3 +149,42 @@
         padding: 0px 20px;
     }
 }
+
+@media screen and (min-width: 2700px) {
+    .proin {
+        height: 800px;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    .proin-lobortis__icon {
+        font-size: 60px;
+    }
+    .proin-lobortis__title {
+        font-size: 59px;
+    }
+    .proin-lobortis__subtitle {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 3200px) {
+    .proin-lobortis__title {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 3400px) {
+    .proin {
+        height: 1000px;
+    }
+    .proin-lobortis__icon {
+        font-size: 65px;
+    }
+    .proin-lobortis__title {
+        font-size: 64px;
+    }
+    .proin-lobortis__subtitle {
+        font-size: 30px;
+    }
+}

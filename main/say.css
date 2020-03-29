@@ -295,3 +295,82 @@
         padding: 30px 0px;
     }
 }
+
+@media screen and (min-width: 2700px) {
+    .say {
+        height: 1000px;
+    }
+    .say-hello {
+        padding-top: 100px;
+    }
+    .contact {
+        padding-top: 125px;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    .say-hello__title {
+        font-size: 57.5px;
+    }
+    .say-hello__subtitle {
+        font-size: 26px;
+    }
+    .say-hello__input,
+    .say-hello__textarea {
+        font-size: 27px;
+    }
+    .contact__title,
+    .contact__subtitle {
+        font-size: 39px;
+    }
+    .contact__address {
+        font-size: 26px;
+    }
+    .contact__link {
+        font-size: 25px;
+    }
+    .contact__link-icon {
+        font-size: 23px;
+    }
+    .contact__link-icon.contact__link-icon_message {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 3400px) {
+    .say {
+        height: 1100px;
+    }
+    .say-hello {
+        padding-top: 130px;
+    }
+    .contact {
+        padding-top: 155px;
+    }
+    .say-hello__title {
+        font-size: 62.5px;
+    }
+    .say-hello__subtitle {
+        font-size: 31px;
+    }
+    .say-hello__input,
+    .say-hello__textarea {
+        font-size: 32px;
+    }
+    .contact__title,
+    .contact__subtitle {
+        font-size: 44px;
+    }
+    .contact__address {
+        font-size: 31px;
+    }
+    .contact__link {
+        font-size: 30px;
+    }
+    .contact__link-icon {
+        font-size: 28px;
+    }
+    .contact__link-icon.contact__link-icon_message {
+        font-size: 35px;
+    }
+}

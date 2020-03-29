@@ -285,3 +285,69 @@
         height: 499.5px;
     }
 }
+
+@media screen and (min-width: 2700px) {
+    .auctor {
+        height: 600px;
+    }
+    .skills-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills-wrapper {
+        width: 75%;
+        padding: 0px;
+    }
+    .bar,
+    .bar__progress {
+        height: 3.5px;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    .donec-content__title,
+    .skills-content__title {
+        font-size: 57.5px;
+    }
+    .donec-content__subtitle,
+    .skills-content__subtitle {
+        font-size: 26px;
+    }
+    .donec-content__pharagraph {
+        font-size: 26.5px;
+    }
+    .skills-bar__title,
+    .skills-bar__subtitle {
+        font-size: 23px;
+    }
+    .bar,
+    .bar__progress {
+        height: 4px;
+    }
+}
+
+@media screen and (min-width: 3400px) {
+    .auctor {
+        height: 750px;
+    }
+    .donec-content__title,
+    .skills-content__title {
+        font-size: 62.5px;
+    }
+    .donec-content__subtitle,
+    .skills-content__subtitle {
+        font-size: 31px;
+    }
+    .donec-content__pharagraph {
+        font-size: 31.5px;
+    }
+    .skills-bar__title,
+    .skills-bar__subtitle {
+        font-size: 28px;
+    }
+    .bar,
+    .bar__progress {
+        height: 5px;
+    }
+}
