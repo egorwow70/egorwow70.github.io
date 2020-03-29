@@ -264,21 +264,21 @@
     }
     .hello-menu__burger {
         display: flex;
-        transition: .4s;
     }
     .hello-menu__item-list {
         display: none;
         position: absolute;
         padding: 0px;
-        top: 100px;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, 0);
+        transform: translate(-50%, -50%);
     }
     .hello-menu__item {
         white-space: nowrap;
         padding: 2px 10px;
     }
     .hello-menu:hover .hello-menu__burger {
+        visibility: hidden;
         background-color: #dfac59;
     }
     .hello-menu:hover .hello-menu__item-list,
@@ -328,9 +328,6 @@
     .hello-wrapper {
         padding: 0px 20px;
     }
-    .hello-menu__item-list {
-        padding-top: 20px;
-    }
 }
 
 @media screen and (max-width: 485px) {
@@ -357,9 +354,6 @@
     }
     .hello {
         height: 1250px;
-    }
-    .hello-menu__item-list {
-        padding-top: 30px;
     }
 }
 
