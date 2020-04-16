@@ -1,0 +1,154 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: brightness(0.5);
+    background-image: url(images/mountains.jpg);
+    background-size: cover;
+}
+
+.calendar {
+    width: 400px;
+    height: 400px;
+    opacity: 0.9;
+    background-color: #272829;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.calendar-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.calendar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12.5%;
+}
+
+.calendar__info {
+    width: 40%;
+    user-select: none;
+}
+
+.calendar__info,
+.calendar__switch {
+    transition: .2s;
+}
+
+.calendar__info:hover,
+.calendar__switch:hover {
+    filter: brightness(1.4);
+}
+
+.calendar__switch-list {
+    display: flex;
+    width: 28.5%;
+    height: 100%;
+}
+
+.calendar__switch {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.calendar__switch_bot:after,
+.calendar__switch_top:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 13px;
+    border-left: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+}
+
+.calendar__switch_bot:after {
+    transform: translate(-50%, -80%)rotate(-45deg);
+    border-left: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+}
+
+.calendar__switch_top:after {
+    transform: translate(-50%, -20%)rotate(135deg);
+}
+
+.calendar__sub-header {
+    display: flex;
+    height: 12.5%;
+}
+
+.calendar__days-table {
+    display: flex;
+    flex-wrap: wrap;
+    height: 75%;
+}
+
+.calendar__day {
+    user-select: none;
+}
+
+.calendar__day,
+.calendar__cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14.2857143%;
+}
+
+.calendar__cell {
+    transition: .0.5s;
+    height: 16.6666667%;
+    box-sizing: border-box;
+}
+
+.calendar__cell:hover {
+    border: 2px solid grey;
+}
+
+.calendar__cell_grey {
+    color: #58595a;
+}
+
+.calendar__cell_green-box {
+    position: relative;
+    background-color: #00cc6a;
+}
+
+.calendar__cell_green-box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border: 2px solid black;
+}
+
+.calendar__cell_green-box:hover {
+    border: 3px solid#00cc6a;
+}
