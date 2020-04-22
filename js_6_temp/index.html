@@ -1,0 +1,72 @@
+<!Doctype html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title> js_6 </title>
+
+    <meta name="author" content="Yahor Samuilionak">
+    <meta name="description" content="Epam_training_task3">
+    <meta name="keywords" content="layout">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="main.css" rel="stylesheet" type="text/css">
+
+    <script src="day_list.js"></script>
+    <script src="functions.js"></script>
+
+</head>
+
+<body>
+
+    <script src="date.js"></script>
+    <script src="calendar.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        const numbCalendarMonth = 12;
+
+        let selectedDiv;
+
+        let calendarCurrentDay = document.querySelector('.calendar__cell_green-box');
+
+        let calendar_sub_header = document.querySelector('.calendar__sub-header');
+
+        let calendarCurrentMonth;
+
+        let a = true;
+
+        let b = true;
+
+        let q = true;
+
+        let c = false;
+    </script>
+
+    <script>
+        const calendar_switch_top = document.querySelector('.calendar__switch_top');
+        calendar_switch_top.onclick = switchToTop;
+    </script>
+
+    <script>
+        const calendar_switch_bot = document.querySelector('.calendar__switch_bot');
+        calendar_switch_bot.onclick = switchToBot;
+    </script>
+
+    <script>
+        const calendar_days_table = document.querySelector('.calendar__days-table');
+        calendar_days_table.onclick = clickOnDay;
+    </script>
+
+    <script>
+        let calendar_info = document.querySelector('.calendar__info');
+        calendar_info.onclick = changeDaysEventToMonth;
+    </script>
+
+</body>
+
+</html>
