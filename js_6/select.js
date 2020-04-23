@@ -1,0 +1,3 @@
+class Select {
+    static selectedDiv;
+}
