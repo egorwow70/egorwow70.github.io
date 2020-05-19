@@ -1,0 +1,23 @@
+<div class="-app-goal">
+    <div class="-app-goal__button-list -app-goal__button-list_right-bordered">
+        <button class="-app-goal__button -app-goal__button_save" (click)="save()" [disabled]="!goalEntity.IsCanSave">
+    </button>
+        <button class="-app-goal__button -app-goal__button_edit" (click)="edit(goalInput)" [disabled]="goalEntity.IsDone">
+
+    </button>
+    </div>
+    <input class="-app-goal__input" type="text" placeholder="Write your goal today" [(ngModel)]="goalEntity.Name" title={{goalEntity.Id}} #goalInput (ngModelChange)="edit()">
+    <div class="-app-goal__button-list -app-goal__button-list_left-bordered">
+        <button class="-app-goal__button -app-goal__button_complete" (click)="done()" [disabled]="!goalEntity.IsCanDone">
+
+    </button>
+        <button class="-app-goal__button -app-goal__button_delete" (click)="delete()" [disabled]="goalEntity.IsDone">
+
+    </button>
+    </div>
+    <div class="-app-goal__done" *ngIf="goalEntity.IsDone" (click)="makeUnmarkGoal()">
+        <div class="-app-goal__done-underscore">
+
+        </div>
+    </div>
+</div>
