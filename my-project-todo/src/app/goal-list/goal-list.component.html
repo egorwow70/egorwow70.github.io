@@ -1,0 +1,38 @@
+<div class="-app-goal-list">
+    <h2 class="-app-goal-list__header">
+        today's goals
+    </h2>
+
+    <div class="-app-goal-list__search">
+        <input class="-app-goal-list__search-input" type="text" placeholder="You can search here any goal!" [(ngModel)]="goalSearch" (ngModelChange)="search()">
+    </div>
+
+    <div *ngTemplateOutlet="goalSearch == '' ? defaultGoalList : GoalListDuringSearching">
+    </div>
+    <ng-template #defaultGoalList>
+        <app-goal *ngFor="let goal of goalList" [goalEntity]="goal" (onDeleted)="deleteGoal($event)" (onDone)="doneGoal($event)" (onMadeUnmark)="madeUnmarkGoal($event)" (onSaved)="saveGoal($event)" (onEdited)="editGoal($event)">
+
+        </app-goal>
+    </ng-template>
+    <ng-template #GoalListDuringSearching>
+        <app-goal *ngFor="let goal of filteredGoalList" [goalEntity]="goal" (onDeleted)="deleteGoal($event)" (onDone)="doneGoal($event)" (onMadeUnmark)="madeUnmarkGoal($event)" (onSaved)="saveGoal($event)" (onEdited)="editGoal($event)">
+
+        </app-goal>
+    </ng-template>
+
+    <div class="-app-goal-list__add">
+        <button class="-app-goal-list__add-button" (click)="addGoal()" [disabled]="goalLimiter || goalSearch">
+      add goal
+    </button>
+    </div>
+
+    <ng-container *ngIf="goalFilterLimiter">
+        <div class="-app-goal-list__sort">
+            <div class="-app-goal-list__sort-style" [class.-app-goal-list__sort-style_from-left-to-right]="goalFilterLimiter">
+                <button class="-app-goal-list__sort-button -app-goal-list__sort-button_top" (click)="sortTop()" [disabled]="isGoalSortedByIncrease"></button>
+                <button class="-app-goal-list__sort-button -app-goal-list__sort-button_bottom" (click)="sortBot()" [disabled]="isGoalSortedByDecrease"></button>
+                <button class="-app-goal-list__sort-button -app-goal-list__sort-button_clean" (click)="clean()" [disabled]="isGoalCleaned"></button>
+            </div>
+        </div>
+    </ng-container>
+</div>

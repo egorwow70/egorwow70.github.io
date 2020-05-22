@@ -1,0 +1,91 @@
+@import url("../../assets/fonts/fontawesome/all/all.min.css") all;
+:host {
+    width: 100%;
+}
+
+.-app-goal {
+    position: relative;
+    display: flex;
+    border-bottom: 2px solid rgba(59, 59, 59, 0.8);
+    &__done {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background-color: rgba(59, 59, 59, 0.2);
+        &-underscore {
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translate(0%, -50%);
+            width: 100%;
+            height: 2px;
+            background-color: rgba(59, 59, 59, 0.8);
+        }
+    }
+    &__input,
+    &__button-list {
+        display: flex;
+        align-items: center;
+    }
+    &__input {
+        width: 70%;
+        padding: 20px 0px;
+        outline: none;
+        border: none;
+        background-color: rgba(223, 222, 228, 1);
+        color: rgba(59, 59, 59, 1);
+        letter-spacing: 0.5px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        &:focus {
+            box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.8);
+        }
+    }
+    &__button-list {
+        justify-content: space-around;
+        width: 15%;
+        &_right-bordered {
+            border-right: 2px solid rgba(59, 59, 59, 0.8);
+        }
+        &_left-bordered {
+            border-left: 2px solid rgba(59, 59, 59, 0.8);
+        }
+    }
+    &__button {
+        padding: 0px;
+        transition: .2s;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        background: none;
+        color: rgba(59, 59, 59, 0.8);
+        font-family: 'Font Awesome 5 free', 'Font Awesome 5 brands';
+        font-size: 19px;
+        &[disabled] {
+            cursor: default;
+            color: rgba(59, 59, 59, 0.3);
+            &:hover {
+                color: rgba(59, 59, 59, 0.3);
+            }
+        }
+        &:hover {
+            color: rgba(38, 56, 89, 1);
+        }
+        &_edit::before {
+            content: '\f044';
+        }
+        &_save::before {
+            content: '\f0c7';
+        }
+        &_complete::before {
+            content: '\f14a';
+        }
+        &_delete::before {
+            content: '\f2ed';
+        }
+    }
+}
