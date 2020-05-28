@@ -1,0 +1,9 @@
+.-app-error-page {
+    text-transform: uppercase;
+    color: rgba(59, 59, 59, 1);
+    &__title {
+        margin: 0px;
+        margin-bottom: 20px;
+        font-size: 70px;
+    }
+}

@@ -1,8 +1,140 @@
-:host {
+@keyframes menuFromLeftToRight {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 15%;
+    }
+}
+
+
+@keyframes underlineScale {
+    0% {
+        transform: scale(0.5,1);
+    }
+    
+    100% {
+       transform: scale(1,1);
+    }
+}
+
+.-app {
     position: relative;
     display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     height: 100vh;
-    background-image: url('../assets/images/working.jpg');
+    background-image: url("../assets/images/working.jpg");
     background-size: cover;
+    &-navigation {
+        width: 15%;
+        height: 100%;
+        animation: menuFromLeftToRight .3s;
+        &__button {
+            position: absolute;
+            z-index:2;
+            top: 50%;
+            left: 0%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(59, 59, 59, 0.8);
+            border-radius: 50%;
+            background-color: rgba(223, 222, 228, 1);
+            &:hover {
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+                border: 2px solid rgba(59, 59, 59, 1);
+            }
+            &_to-menu {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 52%;
+                    transform: translate(0%, -50%) rotate(45deg);
+                    width: 25px;
+                    height: 25px;
+                    border-right: 5px solid rgba(59, 59, 59, 0.8); 
+                    border-top: 5px solid rgba(59, 59, 59, 0.8);
+                    border-radius: 4px;
+                }
+                &:hover {
+                    &::before {
+                        border-right: 5px solid rgba(38, 56, 89, 1); 
+                        border-top: 5px solid rgba(38, 56, 89, 1);
+                    }
+                }
+            }
+            &_from-menu {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 62%;
+                    transform: translate(0%, -50%) rotate(-45deg);
+                    width: 25px;
+                    height: 25px;
+                    border-left: 5px solid rgba(59, 59, 59, 0.8); 
+                    border-top: 5px solid rgba(59, 59, 59, 0.8);
+                    border-radius: 4px;
+                }
+                &:hover {
+                    &::before {
+                        border-left: 5px solid rgba(38, 56, 89, 1); 
+                        border-top: 5px solid rgba(38, 56, 89, 1);
+                    }
+                }
+            }
+        }
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+            border-right: 2px solid rgba(59, 59, 59, 0.8);
+            border-radius: 0%;
+            background-color: rgba(223, 222, 228, 1);
+        }
+        &__item {
+            padding-left: 20%; 
+            &-link {
+                position: relative;
+                padding:0px 10px;
+                outline: none;
+                text-decoration: none;
+                font-size: 40px;
+                color: rgba(59, 59, 59, 1);
+                &.active {
+                    color: rgba(38, 56, 89, 1);
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0px;
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        transform: scale(1,1);
+                        animation: underlineScale .2s;
+                        background: rgba(38, 56, 89, 1);
+                    }
+                }
+            }
+        }
+    }
+    &-router-outlet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
 }

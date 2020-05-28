@@ -1,38 +1,82 @@
-<div class="-app-goal-list">
+<div class="-app-goal-list" *ngIf="!goalListService.isLoading">
     <h2 class="-app-goal-list__header">
         today's goals
     </h2>
 
     <div class="-app-goal-list__search">
-        <input class="-app-goal-list__search-input" type="text" placeholder="You can search here any goal!" [(ngModel)]="goalSearch" (ngModelChange)="search()">
+        <input class="-app-goal-list__search-input" 
+            type="text" 
+            placeholder="You can search here any goal!" 
+            [(ngModel)]="goalListService.goalSearch" 
+            (ngModelChange)="goalListService.search()">
     </div>
 
-    <div *ngTemplateOutlet="goalSearch == '' ? defaultGoalList : GoalListDuringSearching">
+    <div *ngTemplateOutlet="goalListService.goalSearch === '' ? defaultGoalList : goalListDuringSearching">
     </div>
     <ng-template #defaultGoalList>
-        <app-goal *ngFor="let goal of goalList" [goalEntity]="goal" (onDeleted)="deleteGoal($event)" (onDone)="doneGoal($event)" (onMadeUnmark)="madeUnmarkGoal($event)" (onSaved)="saveGoal($event)" (onEdited)="editGoal($event)">
-
+        <app-goal *ngFor="let goal of goalListService.goalList" 
+            [goalEntity]="goal" 
+            [isGoalSelected]="goalListService.isGoalSelected(goal)"
+            (onSelected)="selectGoal($event.id)"
+            (onDeleted)="goalListService.deleteGoal($event)" 
+            (onDone)="goalListService.doneGoal($event)" 
+            (onMadeUnmark)="goalListService.madeUnmarkGoal($event)" 
+            (onSaved)="goalListService.saveGoal($event)" 
+            (onEdited)="goalListService.editGoal($event)">
         </app-goal>
     </ng-template>
-    <ng-template #GoalListDuringSearching>
-        <app-goal *ngFor="let goal of filteredGoalList" [goalEntity]="goal" (onDeleted)="deleteGoal($event)" (onDone)="doneGoal($event)" (onMadeUnmark)="madeUnmarkGoal($event)" (onSaved)="saveGoal($event)" (onEdited)="editGoal($event)">
-
+    <ng-template #goalListDuringSearching>
+        <app-goal *ngFor="let goal of goalListService.filteredGoalList" 
+            [goalEntity]="goal" 
+            (onDeleted)="goalListService.deleteGoal($event)" 
+            (onDone)="goalListService.doneGoal($event)" 
+            (onMadeUnmark)="goalListService.madeUnmarkGoal($event)" 
+            (onSaved)="goalListService.saveGoal($event)" 
+            (onEdited)="goalListService.editGoal($event)">
         </app-goal>
     </ng-template>
 
-    <div class="-app-goal-list__add">
-        <button class="-app-goal-list__add-button" (click)="addGoal()" [disabled]="goalLimiter || goalSearch">
-      add goal
-    </button>
+    <div class="-app-goal-list__selected-goal" *ngIf="goalListService.selectedGoal">
+        <router-outlet></router-outlet>
     </div>
 
-    <ng-container *ngIf="goalFilterLimiter">
+    <div class="-app-goal-list__add">
+        <button class="-app-goal-list__add-button" 
+            (click)="goalListService.addGoal()" 
+            [disabled]="goalListService.settings.goalLimiter || goalListService.goalSearch">
+            add goal
+        </button>
+    </div>
+
+    <ng-container *ngIf="goalListService.settings.goalFilterLimiter">
         <div class="-app-goal-list__sort">
-            <div class="-app-goal-list__sort-style" [class.-app-goal-list__sort-style_from-left-to-right]="goalFilterLimiter">
-                <button class="-app-goal-list__sort-button -app-goal-list__sort-button_top" (click)="sortTop()" [disabled]="isGoalSortedByIncrease"></button>
-                <button class="-app-goal-list__sort-button -app-goal-list__sort-button_bottom" (click)="sortBot()" [disabled]="isGoalSortedByDecrease"></button>
-                <button class="-app-goal-list__sort-button -app-goal-list__sort-button_clean" (click)="clean()" [disabled]="isGoalCleaned"></button>
+            <div class="-app-goal-list__sort-style" 
+                [class.-app-goal-list__sort-style_from-left-to-right]="goalListService.settings.goalFilterLimiter">
+                <button class="-app-goal-list__sort-button -app-goal-list__sort-button_top" 
+                    (click)="goalListService.sortTop()" 
+                    [disabled]="goalListService.settings.isGoalSortedByIncrease || goalListService.settings.goalSortLimiter">
+                </button>
+                <button class="-app-goal-list__sort-button -app-goal-list__sort-button_bottom" 
+                    (click)="goalListService.sortBot()" 
+                    [disabled]="goalListService.settings.isGoalSortedByDecrease || goalListService.settings.goalSortLimiter">
+                </button>
+                <button class="-app-goal-list__sort-button -app-goal-list__sort-button_clean" 
+                    (click)="goalListService.clean()" 
+                    [disabled]="goalListService.settings.isGoalCleaned || goalListService.settings.goalCleanLimiter" 
+                    title="click to delete unsaved goals">
+                </button>
+                <button class="-app-goal-list__sort-button -app-goal-list__sort-button_save" 
+                    (click)="goalListService.save()" 
+                    title="click to save saved goals">
+                </button>
             </div>
         </div>
     </ng-container>
 </div>
+
+<div class="-app-goal-list__loading" *ngIf="goalListService.isLoading">
+    <div class="-app-goal-list__loading-icon"></div>
+</div>
+<!-- 
+<app-goal-details *ngIf="goalListService.selectedGoal"></app-goal-details> 
+ -->

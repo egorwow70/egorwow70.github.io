@@ -1,10 +1,4 @@
 @import url("../../assets/fonts/fontawesome/all/all.min.css") all;
-:host {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 @keyframes fromLeftToRight {
     0% {
@@ -15,6 +9,18 @@
     }
 }
 
+@keyframes rotateLoadIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .-app-goal-list {
     position: relative;
     display: flex;
@@ -22,7 +28,7 @@
     justify-content: center;
     align-items: center;
     width: 380px;
-    transition: .2s;
+    transition: 0.2s;
     user-select: none;
     opacity: 0.9;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
@@ -74,7 +80,7 @@
         &-button {
             width: 150px;
             padding: 12px;
-            transition: .2s;
+            transition: 0.2s;
             cursor: pointer;
             outline: none;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
@@ -104,7 +110,7 @@
         left: 100%;
         transform: translate(4%, -50%);
         width: 60px;
-        height: 100px;
+        height: 120px;
         overflow: hidden;
         &-style {
             position: absolute;
@@ -112,24 +118,24 @@
             left: 0%;
             transform: translate(-50%, -50%);
             width: 65px;
-            height: 90px;
+            height: 110px;
             border-radius: 25%;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
             border: 2px solid rgba(59, 59, 59, 0.8);
             background-color: rgba(223, 222, 228, 1);
             &_from-left-to-right {
-                animation: fromLeftToRight .2s;
+                animation: fromLeftToRight 0.2s;
             }
         }
         &-button {
             padding: 0px;
-            transition: .2s;
+            transition: 0.2s;
             cursor: pointer;
             outline: none;
             border: none;
             background: none;
             color: rgba(59, 59, 59, 0.8);
-            font-family: 'Font Awesome 5 free', 'Font Awesome 5 brands';
+            font-family: "Font Awesome 5 free", "Font Awesome 5 brands";
             font-size: 26px;
             font-weight: 900;
             &[disabled] {
@@ -144,29 +150,88 @@
             }
             &_top {
                 position: absolute;
-                top: 15%;
-                left: 60%;
-                &::before {
-                    content: '\f0de';
+                top: 5%;
+                left: 59%;
+                border: 9px solid transparent;
+                border-bottom: 9px solid rgba(59, 59, 59, 0.8);
+                &[disabled] {
+                    cursor: default;
+                    border-bottom: 9px solid rgba(59, 59, 59, 0.3);
+                    &:hover {
+                        border-bottom: 9px solid rgba(59, 59, 59, 0.3);
+                    }
+                }
+                &:hover {
+                    border-bottom: 9px solid rgba(38, 56, 89, 1);
                 }
             }
             &_bottom {
                 position: absolute;
-                top: 20%;
-                left: 60%;
-                &::before {
-                    content: '\f0dd';
+                top: 34%;
+                left: 59%;
+                border: 9px solid transparent;
+                border-top: 9px solid rgba(59, 59, 59, 0.8);
+                &[disabled] {
+                    cursor: default;
+                    border-top: 9px solid rgba(59, 59, 59, 0.3);
+                    &:hover {
+                        border-top: 9px solid rgba(59, 59, 59, 0.3);
+                    }
+                }
+                &:hover {
+                    border-top: 9px solid rgba(38, 56, 89, 1);
                 }
             }
             &_clean {
                 position: absolute;
-                bottom: 15%;
+                bottom: 30%;
                 left: 62%;
                 font-size: 16px;
                 &::before {
-                    content: '\f1f8';
+                    content: "\f1f8";
+                }
+            }
+            &_save {
+                position: absolute;
+                bottom: 8%;
+                left: 62.5%;
+                font-size: 16px;
+                &::before {
+                    content: "\f0c7";
                 }
             }
         }
+    }
+    &__loading {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        animation: rotateLoadIcon 2s infinite;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+        border: 2px solid rgba(59, 59, 59, 0.8);
+        background-color: rgba(223, 222, 228, 1);
+        &-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            &::before {
+                content: "\f110";
+                font-family: "Font Awesome 5 free", "Font Awesome 5 brands";
+                font-size: 26px;
+                font-weight: bold;
+                color: rgba(59, 59, 59, 0.8);
+            }
+        }
+    }
+    &__selected-goal {
+        position: absolute;
+        top: 50%;
+        left: -130%;
+        transform: translate(0%,-50%);
+        width: 100%;
+        border: 3px solid rgba(59, 59, 59, 0.8);
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
     }
 }

@@ -1,0 +1,13 @@
+{
+  "goalLimit": 5,
+  "goalFilterLimit": 2,
+
+  "goalLimiter": false,
+  "goalFilterLimiter": false,
+  "goalSortLimiter": false,
+  "goalCleanLimiter": false,
+
+  "isGoalSortedByIncrease": false,
+  "isGoalSortedByDecrease": false,
+  "isGoalCleaned": false
+}

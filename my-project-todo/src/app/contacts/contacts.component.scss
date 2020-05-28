@@ -1,0 +1,89 @@
+@import url("../../assets/fonts/fontawesome/all/all.min.css") all;
+.-app-contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    transition: 0.2s;
+    user-select: none;
+    opacity: 0.9;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    border: 2px solid rgba(59, 59, 59, 0.8);
+    background-color: rgba(223, 222, 228, 1);
+    color: rgba(59, 59, 59, 1);
+    &:hover {
+        opacity: 1;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+    }
+    &__company {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        padding: 40px 0px;
+        text-align: center;
+        border-bottom: 2px solid rgba(59, 59, 59, 0.8);
+        font-style: italic;
+        font-size: 28px;
+        &-title{
+            font-size: 44px;
+        }
+        &-icon {
+            padding-right: 50px;
+            font-family: "Font Awesome 5 free", "Font Awesome 5 brands";
+            &::before {
+                content: '\f7a2';
+                font-weight: 900;
+                font-size: 100px;
+            }
+        }
+    }
+    &__link-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        padding: 50px 0px;
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        outline: none;
+        text-decoration: none;
+        letter-spacing: 0.8px;
+        color: rgba(59, 59, 59, 1);
+        &-icon {
+            padding-right: 15px;
+            font-family: "Font Awesome 5 free", "Font Awesome 5 brands";
+            font-size: 22px;
+            &_message::before{
+                content: '\f0e0';
+            }
+            &_tel::before {
+                content: '\f095';
+                font-weight: 900;
+            }
+            &_vk::before {
+                content: '\f189';
+                font-weight: 900;
+            }
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 20px;
+        }
+        &:hover {
+            color: rgba(38, 56, 89, 1);
+        }
+    }
+
+}

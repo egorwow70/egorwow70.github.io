@@ -1,3 +1,49 @@
-<app-goal-list>
-
-</app-goal-list>
+<div class="-app">
+    <ng-container *ngIf="menuMode">
+        <div class="-app-navigation">
+            <div class="-app-navigation__menu">
+                <div class="-app-navigation__item">
+                    <a class="-app-navigation__item-link" 
+                        routerLink="" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">
+                        Home
+                    </a>
+                </div>
+                <div class="-app-navigation__item">
+                    <a class="-app-navigation__item-link" 
+                        routerLink="/about" 
+                        routerLinkActive="active">
+                        About
+                    </a>
+                </div>
+                <div class="-app-navigation__item">
+                    <a class="-app-navigation__item-link" 
+                        routerLink="/goals" 
+                        routerLinkActive="active">
+                        Goals
+                    </a>
+                </div>
+                <div class="-app-navigation__item">
+                    <a class="-app-navigation__item-link" 
+                        routerLink="/contacts" 
+                        routerLinkActive="active">
+                        Contacts
+                    </a>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!menuMode">
+        <div class="-app-navigation__button -app-navigation__button_to-menu" 
+            (click)="toggleMenuMode()">
+        </div>
+    </ng-container>
+    <ng-container *ngIf="menuMode">
+        <div class="-app-navigation__button -app-navigation__button_from-menu" 
+            (click)="toggleMenuMode()">
+        </div>
+    </ng-container>
+    <div class="-app-router-outlet">
+        <router-outlet></router-outlet>
+    </div>
+</div>

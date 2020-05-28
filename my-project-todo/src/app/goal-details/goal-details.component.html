@@ -1,0 +1,17 @@
+<div class="-app-goal__details">
+    <h3 class="-app-goal__details-title">current goal</h3>
+    <div class="-app-goal__details-info">
+        <h4 class="-app-goal__details-id">
+        ID: {{ goal.Id }}
+        </h4>
+        <h4 class="-app-goal__details-name">
+        NAME: {{ goal.Name }}
+        </h4>
+        <h4 class="-app-goal__details-isSaved">
+        SAVED: {{ goal.IsSaved }}
+        </h4>
+        <button class="-app-goal__details-button" 
+            title="go to goal-list!"
+            (click)="goToGoalListComponent()"></button>
+    </div>
+</div>

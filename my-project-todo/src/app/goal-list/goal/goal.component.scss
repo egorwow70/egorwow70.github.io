@@ -1,4 +1,4 @@
-@import url("../../assets/fonts/fontawesome/all/all.min.css") all;
+@import url("../../../assets/fonts/fontawesome/all/all.min.css") all;
 :host {
     width: 100%;
 }
@@ -7,6 +7,9 @@
     position: relative;
     display: flex;
     border-bottom: 2px solid rgba(59, 59, 59, 0.8);
+    &_selected {
+        background-color: rgba(166, 192, 237, 0.8);
+    }
     &__done {
         position: absolute;
         top: 0%;
@@ -41,8 +44,11 @@
         text-align: center;
         font-size: 15px;
         font-weight: 600;
+        &.-app-goal_selected {
+            background-color: rgba(166, 192, 237, 0.1);
+        }
         &:focus {
-            box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.8);
+            box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.3);
         }
     }
     &__button-list {
@@ -57,13 +63,13 @@
     }
     &__button {
         padding: 0px;
-        transition: .2s;
+        transition: 0.2s;
         cursor: pointer;
         outline: none;
         border: none;
         background: none;
         color: rgba(59, 59, 59, 0.8);
-        font-family: 'Font Awesome 5 free', 'Font Awesome 5 brands';
+        font-family: "Font Awesome 5 free", "Font Awesome 5 brands";
         font-size: 19px;
         &[disabled] {
             cursor: default;
@@ -76,16 +82,16 @@
             color: rgba(38, 56, 89, 1);
         }
         &_edit::before {
-            content: '\f044';
+            content: "\f044";
         }
         &_save::before {
-            content: '\f0c7';
+            content: "\f0c7";
         }
         &_complete::before {
-            content: '\f14a';
+            content: "\f14a";
         }
         &_delete::before {
-            content: '\f2ed';
-        }
+            content: "\f2ed";
+        }     
     }
 }

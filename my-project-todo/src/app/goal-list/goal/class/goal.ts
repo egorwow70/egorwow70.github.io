@@ -57,9 +57,29 @@ export class Goal {
         this.isCanDone = isCanDone;
     }
 
-    public eguals(goal: Goal): boolean {
-        return this.Name === goal.Name
-            && this.Id === goal.Id;
+    public equals(goal: Goal): boolean {
+        return (Boolean(goal)
+            && JSON.stringify(goal) === JSON.stringify(this))
+                ? true
+                : false;
     }
 
+    public static fromJSON(json: any): Goal {
+        return Boolean(json)
+            ? new Goal(json.id, json.name, json.isSaved, json.isDone, json.isCanSave, json.isCanDone)
+            : null;
+    }
+
+    public static toJSON(goal: Goal): any {
+        return Boolean(goal)
+            ? {
+                id: goal.Id,
+                name: goal.Name,
+                isSaved: goal.IsSaved,
+                isDone: goal.IsDone,
+                isCanSave: goal.IsCanSave,
+                isCanDone: goal.IsCanDone
+            }
+            : {};
+    }
 }
