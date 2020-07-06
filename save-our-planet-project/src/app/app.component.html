@@ -1,0 +1,184 @@
+<div 
+    class="-app" 
+    *ngIf="!isLoading">
+    <div 
+        class="-app-navigation" 
+        [class.-app-navigation_menu-mode]="menuMode">
+        <a 
+            class="-app-navigation__profile-button"
+            [class.-app-navigation__profile-button_menu-mode]="menuMode"
+            title="profile"
+            routerLink="/user-profile">
+        </a>
+        <a 
+            class="-app-navigation__donation-button"
+            [class.-app-navigation__donation-button_menu-mode]="menuMode"
+            title="donate"
+            routerLink="/donation">
+        </a>
+        <a 
+            class="-app-navigation__statistic-button"
+            [class.-app-navigation__statistic-button_menu-mode]="menuMode"
+            title="donation statistic"
+            routerLink="/donation-statistic">
+        </a>
+        <div 
+            class="-app-navigation__button" 
+            (click)="toggleMenuMode()">
+            <span class="-app-navigation__button-line -app-navigation__button-line_top">
+            </span>
+            <span class="-app-navigation__button-line -app-navigation__button-line_middle">
+            </span>
+            <span class="-app-navigation__button-line -app-navigation__button-line_bottom">
+            </span>
+        </div>
+        <ng-container *ngIf="menuMode">
+            <div class="-app-navigation__menu">
+                <div class="-app-navigation__item">
+                    <a 
+                        class="-app-navigation__item-link"
+                        (click)="toggleMenuMode()"
+                        routerLink="/home"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">
+                        Home
+                    </a>
+                </div>
+                <div class="-app-navigation__item">
+                    <a 
+                        class="-app-navigation__item-link" 
+                        (click)="toggleMenuMode()" 
+                        routerLink="/about" 
+                        routerLinkActive="active">
+                        About
+                    </a>
+                </div>
+                <div class="-app-navigation__item">
+                    <a 
+                        class="-app-navigation__item-link" 
+                        (click)="toggleMenuMode()" 
+                        routerLink="/countries" 
+                        routerLinkActive="active">
+                        Countries
+                    </a>
+                </div>
+                <div class="-app-navigation__item">
+                    <a 
+                        class="-app-navigation__item-link" 
+                        (click)="toggleMenuMode()" 
+                        routerLink="/trees" 
+                        routerLinkActive="active">
+                        Trees
+                    </a>
+                </div>
+                <div class="-app-navigation__item">
+                    <a 
+                        class="-app-navigation__item-link" 
+                        (click)="toggleMenuMode()" 
+                        routerLink="/registration" 
+                        routerLinkActive="active">
+                        Registration
+                    </a>
+                </div>
+                <div class="-app-navigation__item">
+                    <a 
+                        class="-app-navigation__item-link" 
+                        (click)="toggleMenuMode()" 
+                        routerLink="/contacts" 
+                        routerLinkActive="active">
+                        Contacts
+                    </a>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="-app-router-outlet">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<div class="-app-loading__representation -app-loading__representation_cinema">
+    <div class="-app-loading__present-title">
+        Egor Samuilionak presents
+    </div>
+    <div class="-app-loading__sub-title">
+        <div  class="-app-loading__sub-title_first">
+            <div class="-app-loading__sub-title_first-s">
+                s
+            </div>
+            <div class="-app-loading__sub-title_first-a">
+                a
+            </div>
+            <div class="-app-loading__sub-title_first-v">
+                v
+            </div>
+            <div class="-app-loading__sub-title_first-e">
+                e
+            </div>
+        </div>
+        <div  class="-app-loading__sub-title_second">
+            <div class="-app-loading__sub-title_second-o">
+                o
+            </div>
+            <div class="-app-loading__sub-title_second-u">
+                u
+            </div>
+            <div class="-app-loading__sub-title_second-r">
+                r
+            </div>
+        </div>
+        <div  class="-app-loading__sub-title_third">
+            <div class="-app-loading__sub-title_third-p">
+                p
+            </div>
+            <div class="-app-loading__sub-title_third-l">
+                l
+            </div>
+            <div class="-app-loading__sub-title_third-a">
+                a
+            </div>
+            <div class="-app-loading__sub-title_third-n">
+                n
+            </div>
+            <div class="-app-loading__sub-title_third-e">
+                e
+            </div>
+            <div class="-app-loading__sub-title_third-t">
+                t
+            </div>
+        </div>
+        <div  class="-app-loading__sub-title_fourth">
+            <div class="-app-loading__sub-title_fourth-p">
+                p
+            </div>
+            <div class="-app-loading__sub-title_fourth-r">
+                r
+            </div>
+            <div class="-app-loading__sub-title_fourth-o">
+                o
+            </div>
+            <div class="-app-loading__sub-title_fourth-j">
+                j
+            </div>
+            <div class="-app-loading__sub-title_fourth-e">
+                e
+            </div>
+            <div class="-app-loading__sub-title_fourth-c">
+                c
+            </div>
+            <div class="-app-loading__sub-title_fourth-t">
+                t
+            </div>
+        </div>
+    </div>
+</div>
+
+<div
+    class="-app-loading" 
+    *ngIf="isLoading">
+    <div class="-app-loading__title">
+        Now loading
+    </div>
+    <div class="-app-loading__line">
+    </div>
+</div>
